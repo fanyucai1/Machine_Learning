@@ -1,10 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import os
-import re
 from multiprocessing import Pool
-clinvar="/data/Database/clinvar/clinvar.vcf"
-genelist="/data/Panel275/gene_list/gene_275.list"
+clinvar="/data/Database/clinvar/2019.7.20/clinvar.vcf"
 gene={}
 dict={}
 if os.path.exists("knownCanonical.tsv"):
@@ -14,11 +12,6 @@ if os.path.exists("knownCanonical.tsv"):
         array=line.split("\t")
         dict[array[0]]=1
     file.close()
-infile=open(genelist,"r")
-for line in infile:
-    line=line.strip()
-    gene[line]=1
-infile.close()
 ###########################################
 infile=open(clinvar,"r")
 id=[]
@@ -26,11 +19,8 @@ for line in infile:
     line = line.strip()
     if not line.startswith("#"):
         array = line.split("\t")
-        p=re.compile(r'GENEINFO=(\S+)')
-        geneinfo=p.findall(line)
-        if geneinfo !=[]:
-            if geneinfo[0].split(":")[0] in gene and array[2] not in dict:
-                id.append(array[2])
+        if array[2] not in dict:
+            id.append(array[2])
 infile.close()
 
 def run(ID):
@@ -44,8 +34,8 @@ def run(ID):
         outfile.write("%s\t%s\n"%(ID,result))
         outfile.close()
     except:
-        pass
+        print(ID)
 if __name__=="__main__":
-    pool = Pool(processes=200)
+    pool = Pool(processes=50)
     pool.map(run, id)
     print("done")

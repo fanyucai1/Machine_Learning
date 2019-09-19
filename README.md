@@ -14,9 +14,8 @@ https://blog.csdn.net/baidu_28858149/article/details/50553414
 
 3.  特征数据预处理（sklearn.preprocessing）
 
-        Scale：
+        Scale：MinMaxScaler,MaxAbsScaler(MaxAbsScaler 和 maxabs_scale这两个方法是专门为稀疏数据的规模化所设计的。如果你的数据有许多异常值可以使用robust_scale 和 RobustScaler这两个方法。它会根据中位数或者四分位数去中心化数据。)
         normalize：通过减去平均值，然后除以方差，使得到的分布具有单位方差，标注化受到异常值的影响很小，经常被使用在分类与聚类中。
-
 
 参考链接：
 https://scikit-learn.org/stable/modules/preprocessing.html

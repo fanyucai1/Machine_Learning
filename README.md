@@ -12,11 +12,17 @@
 参考链接：
 https://blog.csdn.net/baidu_28858149/article/details/50553414
 
-3.  特征数据的归一化和标注化
+3.  特征数据预处理（sklearn.preprocessing）
 
-        归一化：通过减去最小值，然后除以（Max-min）使数据归一化,Scikit-learn通过MinMaxScaler来实现（比如神经网络就需要输入值得范围使0到1）
-        标准化：通过减去平均值，然后除以方差，使得到的分布具有单位方差，标注化受到异常值的影响很小，Scikit-learn通过StandardScaler
+        Scale：
+        normalize：通过减去平均值，然后除以方差，使得到的分布具有单位方差，标注化受到异常值的影响很小，经常被使用在分类与聚类中。
 
 
 参考链接：
 https://scikit-learn.org/stable/modules/preprocessing.html
+
+
+4. DataFrame与array之间的互相转化
+
+        df = pd.dataframe()
+        arr = df.values

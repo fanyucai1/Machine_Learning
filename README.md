@@ -59,4 +59,10 @@ https://scikit-learn.org/stable/modules/preprocessing.html
 | **Anomaly detection**               |          |               |           |            |                                                 | 
 | support vector machine              | ○        | ○             |           | 2          | Especially good for large feature sets          | 
 | PCA-based anomaly detection         |          | ○             | ●         | 3          |                                                 | 
-| K-means                             |          | ○             | ●         | 4          | A clustering algorithm                          | 
+| K-means                             |          | ○             | ●         | 4          | A clustering algorithm                          |
+
+<div STYLE="page-break-after: always;"></div>
+
+
+
+hahha

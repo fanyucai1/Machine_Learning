@@ -25,3 +25,35 @@ https://scikit-learn.org/stable/modules/preprocessing.html
 
         df = pd.dataframe()
         arr = df.values
+        
+| Algorithm                           | Accuracy | Training time | Linearity | Parameters | Notes                                           | 
+|-------------------------------------|----------|---------------|-----------|------------|-------------------------------------------------| 
+| **Two-class classification**        |          |               |           |            |                                                 | 
+| logistic regression                 |          | ●             | ●         | 5          |                                                 | 
+| decision forest                     | ●        | ○             |           | 6          |                                                 | 
+| decision jungle                     | ●        | ○             |           | 6          | Low memory footprint                            | 
+| boosted decision tree               | ●        | ○             |           | 6          | Large memory footprint                          | 
+| neural network                      | ●        |               |           | 9          | Additional customization is possible            | 
+| averaged perceptron                 | ○        | ○             | ●         | 4          |                                                 | 
+| support vector machine              |          | ○             | ●         | 5          | Good for large feature sets                     | 
+| locally deep support vector machine | ○        |               |           | 8          | Good for large feature sets                     | 
+| Bayes’ point machine                |          | ○             | ●         | 3          |                                                 | 
+| **Multi-class classification**      |          |               |           |            |                                                 | 
+| logistic regression                 |          | ●             | ●         | 5          |                                                 | 
+| decision forest                     | ●        | ○             |           | 6          |                                                 | 
+| decision jungle                     | ●        | ○             |           | 6          | Low memory footprint                            | 
+| neural network                      | ●        |               |           | 9          | Additional customization is possible            | 
+| one-v-all                           | -        | -             | -         | -          | See properties of the two-class method selected | 
+| **Regression**                      |          |               |           |            |                                                 | 
+| linear                              |          | ●             | ●         | 4          |                                                 | 
+| Bayesian linear                     |          | ○             | ●         | 2          |                                                 | 
+| decision forest                     | ●        | ○             |           | 6          |                                                 | 
+| boosted decision tree               | ●        | ○             |           | 5          | Large memory footprint                          | 
+| fast forest quantile                | ●        | ○             |           | 9          | Distributions rather than point predictions     | 
+| neural network                      | ●        |               |           | 9          | Additional customization is possible            | 
+| Poisson                             |          |               | ●         | 5          | Technically log-linear. For predicting counts   | 
+| ordinal                             |          |               |           | 0          | For predicting rank-ordering                    | 
+| **Anomaly detection**               |          |               |           |            |                                                 | 
+| support vector machine              | ○        | ○             |           | 2          | Especially good for large feature sets          | 
+| PCA-based anomaly detection         |          | ○             | ●         | 3          |                                                 | 
+| K-means                             |          | ○             | ●         | 4          | A clustering algorithm                          | 

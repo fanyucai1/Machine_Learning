@@ -61,8 +61,9 @@ https://scikit-learn.org/stable/modules/preprocessing.html
 | PCA-based anomaly detection         |          | ○             | ●         | 3          |                                                 | 
 | K-means                             |          | ○             | ●         | 4          | A clustering algorithm                          |
 
-<div STYLE="page-break-after: always;"></div>
+ --- 
 
 
 
-hahha
+
+好
